@@ -1,0 +1,31 @@
+[project]
+name = "karpathy-zero-to-hero"
+version = "0.1.0"
+description = "Implementations of Andrej Karpathy's Neural Networks: Zero to Hero lectures"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "tqdm",
+    "torch",
+    "graphviz",
+    "tiktoken",
+    "regex",
+    "datasets",
+    "transformers",
+    "ipykernel",
+    "jupyterlab",
+]
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/zth"]
+
+[tool.ruff]
+line-length = 100
